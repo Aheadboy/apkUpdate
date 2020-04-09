@@ -52,3 +52,4 @@ artifacts {
 
 //////// 打包发布配置结束 ////////
 //执行命令：gradlew uploadArchives 获取aar包。
+//https://blog.csdn.net/lindroid/article/details/80271502
