@@ -7,12 +7,14 @@ import android.content.pm.PackageManager;
 
 import java.util.List;
 
+import static com.darcy.apkupdate.constant.APKPATH;
+
 public class ApkVersionTool {
     public static void setPathOfApkToInstall(String pathOfApkToInstall) {
         ApkVersionTool.pathOfApkToInstall = pathOfApkToInstall;
     }
 
-    private static String pathOfApkToInstall = "/mnt/sdcard/Download/apkNeedToInstall.apk";
+    private static String pathOfApkToInstall = APKPATH;
 
     private static boolean isApkInstalled(Context ctx) {
         PackageInfo newApk = ctx.getPackageManager().getPackageArchiveInfo(pathOfApkToInstall, 0);
