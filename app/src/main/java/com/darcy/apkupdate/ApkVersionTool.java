@@ -4,11 +4,13 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import hugo.weaving.DebugLog;
 
 import java.util.List;
 
 import static com.darcy.apkupdate.constant.APKPATH;
 
+@DebugLog
 public class ApkVersionTool {
     public static void setPathOfApkToInstall(String pathOfApkToInstall) {
         ApkVersionTool.pathOfApkToInstall = pathOfApkToInstall;
