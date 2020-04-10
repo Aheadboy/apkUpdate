@@ -7,7 +7,7 @@
                  android:supportsRtl="true">
         <provider
                 android:name="androidx.core.content.FileProvider"
-                android:authorities="${applicationId}.fileProvider"
+                android:authorities="com.darcy.apkupdate.fileProvider"
                 android:grantUriPermissions="true"
                 android:exported="false">
             <meta-data

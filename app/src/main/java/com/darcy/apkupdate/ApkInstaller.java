@@ -19,7 +19,7 @@ public class ApkInstaller {
         Uri contentUri = null;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION|Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
-            contentUri = FileProvider.getUriForFile(ctx, BuildConfig.APPLICATION_ID + ".fileProvider"
+            contentUri = FileProvider.getUriForFile(ctx, BuildConfig.LIBRARY_PACKAGE_NAME + ".fileProvider"
                     , new File(APKPATH));
         } else {
             contentUri = Uri.fromFile(new File(APKPATH));
