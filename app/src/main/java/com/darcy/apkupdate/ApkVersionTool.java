@@ -4,14 +4,17 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.util.Log;
 import hugo.weaving.DebugLog;
 
+import java.text.MessageFormat;
 import java.util.List;
 
 import static com.darcy.apkupdate.constant.APKPATH;
 
 @DebugLog
 public class ApkVersionTool {
+    private static final String TAG = ApkVersionTool.class.getSimpleName();
     public static void setPathOfApkToInstall(String pathOfApkToInstall) {
         ApkVersionTool.pathOfApkToInstall = pathOfApkToInstall;
     }
@@ -34,6 +37,8 @@ public class ApkVersionTool {
     }
 
     private static boolean isLatestVName(String installed, String newApk) {
+        Log.i(TAG, MessageFormat.format("installed:{0},newApk:{1}", installed, newApk));
+
         int res = 0;
 
         String[] oldNumbers = installed.split("\\.");
