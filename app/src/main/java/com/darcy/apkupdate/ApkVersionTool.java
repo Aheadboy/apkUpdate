@@ -5,14 +5,10 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.util.Log;
-import hugo.weaving.DebugLog;
-
 import java.text.MessageFormat;
 import java.util.List;
 
 import static com.darcy.apkupdate.constant.APKPATH;
-
-@DebugLog
 public class ApkVersionTool {
     private static final String TAG = ApkVersionTool.class.getSimpleName();
     public static void setPathOfApkToInstall(String pathOfApkToInstall) {
